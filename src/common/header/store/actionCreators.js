@@ -39,4 +39,4 @@ export const mouseLeave = () => ({
 export const changePage = (page) => ({
   type: actionTypes.CHANGE_PAGE,
   page
-})
+});

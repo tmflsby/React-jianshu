@@ -1,0 +1,48 @@
+{
+  "success": true,
+  "data": {
+    "topicList": [{
+      "id": 1,
+      "title": "社会热点",
+      "imgUrl": "//upload.jianshu.io/collections/images/261938/man-hands-reading-boy-large.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"
+    }, {
+      "id": 2,
+      "title": "手手绘",
+      "imgUrl": "//upload.jianshu.io/collections/images/21/20120316041115481.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"
+    }],
+    "articleList": [{
+      "id": 1,
+      "title": "“不厚道”的程序员：年后第一天上班就提辞职",
+      "desc": "“我打算年后第一天上班就提离职，下家已经找好了。”程序员海滨说。 他犹豫道，“我这样做是不是不厚道啊？刚拿完年终奖就跑。” 公司是年前最后一天发...",
+      "imgUrl": "//upload-images.jianshu.io/upload_images/2539976-05973d2f4295fdfb.png?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240"
+    }, {
+      "id": 2,
+      "title": "无双",
+      "desc": "无双凝视眼前的男子，无奈叹息，终还是唤出古剑风吟。 “早就听闻战神天下无敌，不曾想人们口中无人能挡的战神竟是女子。”男子朗声道，语调惊诧下...",
+      "imgUrl": "//upload-images.jianshu.io/upload_images/1741702-df5790b68c5143cc.png?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240"
+    }, {
+      "id": 3,
+      "title": "小规模团队微服务架构实践",
+      "desc": "序 网络上介绍微服务的文章很多，但是针对小规模团队如何实践微服务架构的文章很少，而照搬大公司的做法并不完全适合，很容易失败。笔者在这个过程中也走...",
+      "imgUrl": "//upload-images.jianshu.io/upload_images/12114912-65731d24d890dd9b.png?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240"
+    }, {
+      "id": 4,
+      "title": "《我的前半生》里70句经典台词，句句走心，总有一句可以打动你",
+      "desc": "1、没有任何人会成为你以为的、今生今世的避风港,只有你自己,才是自己最后的庇护所。再破败再简陋,也好过寄人篱下。 2、首先要做到可以取代任何人,...",
+      "imgUrl": "//upload-images.jianshu.io/upload_images/13917412-af882b649924d8cf.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240"
+    }],
+    "recommendList": [{
+      "id": 1,
+      "imgUrl": "//cdn2.jianshu.io/assets/web/banner-s-club-aa8bdf19f8cf729a759da42e4a96f366.png"
+    }, {
+      "id": 2,
+      "imgUrl": "//cdn2.jianshu.io/assets/web/banner-s-7-1a0222c91694a1f38e610be4bf9669be.png"
+    }, {
+      "id": 3,
+      "imgUrl": "//cdn2.jianshu.io/assets/web/banner-s-5-4ba25cf5041931a0ed2062828b4064cb.png"
+    }, {
+      "id": 4,
+      "imgUrl": "//cdn2.jianshu.io/assets/web/banner-s-6-c4d6335bfd688f2ca1115b42b04c28a7.png"
+    }]
+  }
+}
