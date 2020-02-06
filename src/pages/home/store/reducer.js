@@ -19,10 +19,10 @@ const changeHomeDate = (state, action) => {
 
 const addArticleList = (state, action) => {
   return state.merge({
-    articleList: state.get('articleList').concat(action.list),
+    articleList: state.get('articleList').concat(fromJS(action.list)),
     articlePage: action.nextPage
   });
-}
+};
 
 export default (state = defaultState, action) => {
   switch (action.type) {

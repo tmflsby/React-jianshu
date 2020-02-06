@@ -18,7 +18,7 @@ class App extends Component {
           <Router>
             <Header />
             <Route path='/' exact component={Home}></Route>
-            <Route path='/detail' exact component={Detail}></Route>
+            <Route path='/detail/:id' exact component={Detail}></Route>
           </Router>
         </Provider>
       </Fragment>
