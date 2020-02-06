@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { DetailWrapper, Header, Content } from './style';
 import * as actionCreators from './store/actionCreators';
 
-class Detial extends Component {
+class Detial extends PureComponent {
   render() {
     const { title, content } = this.props;
-      return (
+    return (
       <DetailWrapper>
         <Header>{ title }</Header>
         <Content dangerouslySetInnerHTML={{__html: content}}></Content>
