@@ -1,5 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
 
+/**
+ * 全局样式
+ * */
 const GlobalStyle = createGlobalStyle`
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -17,7 +20,6 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
     font: inherit;
     vertical-align: baseline;
   }
@@ -37,7 +39,6 @@ const GlobalStyle = createGlobalStyle`
   }
   blockquote:before, blockquote:after,
   q:before, q:after {
-    content: '';
     content: none;
   }
   table {

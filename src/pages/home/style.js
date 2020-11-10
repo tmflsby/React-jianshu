@@ -95,9 +95,79 @@ export const WriterWrapper = styled.div`
   width: 278px;
   border: 1px solid #dcdc;
   border-radius: 3px;
-  height: 300px;
+  height: 375px;
   line-height: 300px;
   text-align: center;
+`
+
+export const WriterInfoTitle = styled.div`
+  height: 30px;
+  line-height: 30px;
+  margin: 0 15px 15px;
+  font-size: 14px;
+  text-align: left;
+  color: #969696;
+`
+export const WriterInfoSwitch = styled.span`
+  float: right;
+  font-size: 13px;
+  cursor: pointer;
+  .spin {
+    display: block;
+    float: left;
+    font-size: 12px;
+    margin-right: 2px;
+    transition: all .2s ease-in;
+    transform-origin: center center;
+  }
+`
+
+export const WriterInfoList = styled.div`
+  padding: 0 15px;
+  height: 330px;
+`
+
+export const WriterInfoItem = styled.div`
+  position: relative;
+  box-sizing: border-box;
+  height: 50px;
+  margin-bottom: 15px;
+  border: 1px solid red;
+  .writer-pic {
+    display: block;
+    float: left;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+`
+
+export const WriterDesc = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  float: right;
+  width: 200px;
+  height: 50px;
+  margin-right: -10px;
+`
+
+export const WriterName = styled.h3`
+  height: 30px;
+  line-height: 30px;
+  width: 100%;
+  font-size: 14px;
+  text-align: left;
+`
+
+export const WriterInfo = styled.p`
+  height: 20px;
+  line-height: 20px;
+  width: 100%;
+  font-size: 12px;
+  text-align: left;
 `
 
 export const LoadMore = styled.div   `

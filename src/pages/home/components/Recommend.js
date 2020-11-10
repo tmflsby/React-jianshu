@@ -1,18 +1,18 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
-import { RecommendWrapper, RecommendItem } from '../style';
+import * as HomeStyle from '../style';
 
 class Recommend extends PureComponent {
   render() {
     const { list } = this.props;
     return (
-      <RecommendWrapper>
+      <HomeStyle.RecommendWrapper>
         {
           list.map((item) => {
-            return <RecommendItem key={item.get('id')} imgUrl={item.get('imgUrl')}></RecommendItem>
+            return <HomeStyle.RecommendItem key={item.get('id')} imgUrl={item.get('imgUrl')}/>
           })
         }
-      </RecommendWrapper>
+      </HomeStyle.RecommendWrapper>
     )
   }
 }
@@ -23,7 +23,7 @@ const mapStateToProps = (state) => {
   }
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = () => {
   return {
 
   }

@@ -1,6 +1,7 @@
 import * as actionTypes from './actionTypes';
 import { fromJS } from 'immutable';
 
+/**初始化默认 state*/
 const defaultState = fromJS({
   focused: false,
   mouseIn: false,

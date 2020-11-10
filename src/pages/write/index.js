@@ -5,9 +5,10 @@ import { connect } from 'react-redux';
 class Write extends PureComponent {
   render() {
     const { loginStatus } = this.props;
+
     if (loginStatus) {
       return (
-        <div>写文章页面</div>
+        <div>写文章页面——开发中</div>
       )
     } else {
       return <Redirect to='/login'/>
@@ -22,7 +23,7 @@ const mapStateToProps = (state) => {
   }
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = () => {
   return {
 
   }

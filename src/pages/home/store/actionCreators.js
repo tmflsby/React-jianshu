@@ -8,12 +8,6 @@ const changeHomeDataAction = (result) => ({
   recommendList: result.recommendList
 });
 
-const addHomeList = (list, nextPage) => ({
-  type: actionTypes.ADD_ARTICLE_LIST,
-  list,
-  nextPage
-});
-
 export const getHomeInfo = () => {
   return (dispatch) => {
     axios.get('/api/home.json').then(res => {
@@ -24,6 +18,12 @@ export const getHomeInfo = () => {
     })
   }
 };
+
+const addHomeList = (list, nextPage) => ({
+  type: actionTypes.ADD_ARTICLE_LIST,
+  list,
+  nextPage
+});
 
 export const getMoreListAction = (page) => {
   return (dispatch) => {

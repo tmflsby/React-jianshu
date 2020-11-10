@@ -4,60 +4,9 @@ import { Link } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
 import { actionCreators } from './store';
 import { actionCreators as loginActionCreators } from '../../pages/Login/store';
-import {
-  HeaderWrapper, Logo, Nav, NavItem, NavSearch, SearchWrapper,
-  SearchInfo, SearchInfoTitle, SearchInfoSwitch, SearchInfoList,
-  SearchInfoItem, Addition, Button
-} from './style';
+import * as HeaderStyle from './style';
 
 class Header extends Component {
-  render() {
-    const { focused, list, login, logout, handleInputFocus, handleInputBlur } = this.props;
-    return (
-      <HeaderWrapper>
-        <Link to='/'>
-          <Logo />
-        </Link>
-        <Nav>
-          <NavItem className='left active'>首页</NavItem>
-          <NavItem className='left'>下载APP</NavItem>
-          {
-            login ?
-              <NavItem className='right' onClick={logout}>退出</NavItem> :
-              <Link to='/login'>
-                <NavItem className='right'>登录</NavItem>
-              </Link>
-          }
-          <NavItem className='right'>
-            <i className="iconfont">&#xe636;</i>
-          </NavItem>
-          <SearchWrapper>
-            <CSSTransition in={focused}
-                           timeout={200}
-                           classNames='slide'
-            >
-              <NavSearch className={focused ? 'focused' : ''}
-                         onFocus={() => handleInputFocus(list)}
-                         onBlur={handleInputBlur}
-              ></NavSearch>
-            </CSSTransition>
-            <i className={focused ? 'focused iconfont zoom' : 'iconfont zoom'}>&#xe62d;</i>
-            {this.getListArea()}
-          </SearchWrapper>
-        </Nav>
-        <Addition>
-          <Link to='/write'>
-            <Button className='writting'>
-              <i className="iconfont">&#xe6e5;</i>
-              写文章
-            </Button>
-          </Link>
-          <Button className='reg'>注册</Button>
-        </Addition>
-      </HeaderWrapper>
-    )
-  }
-
   getListArea() {
     const {
       focused, list, page, totalPage, mouseIn,
@@ -69,31 +18,79 @@ class Header extends Component {
     if (newList.length) {
       for (let i = (page - 1) * 10; i < page * 10; i++) {
         pageList.push(
-          <SearchInfoItem key={newList[i]}>{newList[i]}</SearchInfoItem>
+          <HeaderStyle.SearchInfoItem key={newList[i]}>{newList[i]}</HeaderStyle.SearchInfoItem>
         )
       }
     }
 
     if (focused || mouseIn) {
       return (
-        <SearchInfo onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-          <SearchInfoTitle>
+        <HeaderStyle.SearchInfo onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+          <HeaderStyle.SearchInfoTitle>
             热门搜索
-            <SearchInfoSwitch onClick={() => handleChangePage(page, totalPage, this.spinIcon)}>
+            <HeaderStyle.SearchInfoSwitch onClick={() => handleChangePage(page, totalPage, this.spinIcon)}>
               <i className="iconfont spin" ref={(icon) => {this.spinIcon = icon}}>&#xe851;</i>
               换一批
-            </SearchInfoSwitch>
-          </SearchInfoTitle>
-          <SearchInfoList>
-            {
-              pageList
-            }
-          </SearchInfoList>
-        </SearchInfo>
+            </HeaderStyle.SearchInfoSwitch>
+          </HeaderStyle.SearchInfoTitle>
+          <HeaderStyle.SearchInfoList>
+            {pageList}
+          </HeaderStyle.SearchInfoList>
+        </HeaderStyle.SearchInfo>
       )
     } else {
       return null;
     }
+  }
+
+  render() {
+    const { focused, list, login, logout, handleInputFocus, handleInputBlur } = this.props;
+
+    return (
+      <HeaderStyle.HeaderWrapper>
+        <Link to='/'>
+          <HeaderStyle.Logo/>
+        </Link>
+        <HeaderStyle.Nav>
+          <HeaderStyle.NavItem className='left active'>首页</HeaderStyle.NavItem>
+          <HeaderStyle.NavItem className='left'>下载APP</HeaderStyle.NavItem>
+          {
+            login ?
+              <HeaderStyle.NavItem className='right' onClick={logout}>退出</HeaderStyle.NavItem> :
+              <Link to='/login'>
+                <HeaderStyle.NavItem className='right'>登录</HeaderStyle.NavItem>
+              </Link>
+          }
+          <HeaderStyle.NavItem className='right'>
+            <i className="iconfont">&#xe636;</i>
+          </HeaderStyle.NavItem>
+          <HeaderStyle.SearchWrapper>
+            <CSSTransition
+              in={focused}
+              timeout={200}
+              classNames='slide'
+            >
+              <HeaderStyle.NavSearch
+                className={focused ? 'focused' : ''}
+                onFocus={() => handleInputFocus(list)}
+                onBlur={handleInputBlur}
+              />
+            </CSSTransition>
+            <i className={focused ? 'focused iconfont zoom' : 'iconfont zoom'}>&#xe62d;</i>
+            {this.getListArea()}
+          </HeaderStyle.SearchWrapper>
+        </HeaderStyle.Nav>
+        <HeaderStyle.Addition>
+          <Link to='/write'>
+            <HeaderStyle.Button className='writing'>
+              <i className="iconfont">&#xe6e5;</i>
+              写文章
+            </HeaderStyle.Button>
+          </Link>
+          <HeaderStyle.Button className='reg'>注册</HeaderStyle.Button>
+        </HeaderStyle.Addition>
+      </HeaderStyle.HeaderWrapper>
+    )
   }
 }
 

@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { LoginWrapper, LoginBox, Input, Button } from './style';
+import * as LoginStyle from './style';
 import * as actionCreators from './store/actionCreators';
 
 class Login extends PureComponent {
@@ -9,13 +9,13 @@ class Login extends PureComponent {
     const { loginStatus, login } = this.props;
     if (!loginStatus) {
       return (
-        <LoginWrapper>
-          <LoginBox>
-            <Input placeholder='账号' ref={(input) => {this.account = input}}></Input>
-            <Input placeholder='密码' type='password' ref={(input) => {this.password = input}}></Input>
-            <Button onClick={() => login(this.account, this.password)}>登录</Button>
-          </LoginBox>
-        </LoginWrapper>
+        <LoginStyle.LoginWrapper>
+          <LoginStyle.LoginBox>
+            <LoginStyle.Input placeholder='账号' ref={(input) => {this.account = input}}/>
+            <LoginStyle.Input placeholder='密码' type='password' ref={(input) => {this.password = input}}/>
+            <LoginStyle.Button onClick={() => login(this.account, this.password)}>登录</LoginStyle.Button>
+          </LoginStyle.LoginBox>
+        </LoginStyle.LoginWrapper>
       )
     } else {
       return <Redirect to='/'/>

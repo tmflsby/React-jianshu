@@ -14,15 +14,15 @@ class App extends Component {
   render() {
     return (
       <Fragment>
-        <IconfontGlobalStyle />
-        <GlobalStyle />
+        <IconfontGlobalStyle/>
+        <GlobalStyle/>
         <Provider store={store}>
           <Router>
-            <Header />
-            <Route path='/' exact component={Home}></Route>
-            <Route path='/login' exact component={Login}></Route>
-            <Route path='/write' exact component={Write}></Route>
-            <Route path='/detail/:id' exact component={Detail}></Route>
+            <Header/>
+            <Route path='/' exact component={Home}/>
+            <Route path='/login' exact component={Login}/>
+            <Route path='/write' exact component={Write}/>
+            <Route path='/detail/:id' exact component={Detail}/>
           </Router>
         </Provider>
       </Fragment>
